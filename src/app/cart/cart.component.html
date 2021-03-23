@@ -1,0 +1,20 @@
+<table class="table table-stripped table-hoverable">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Discount Price</th>
+            <th>Quantity</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let obj of cart">
+            <td>{{obj.name}}</td>
+            <td>{{obj.price}}</td>
+            <td>{{((100-obj.discount)/100)*obj.price}}</td>
+            <td>{{obj.qty}}</td>
+            <td>{{obj.qty * (((100-obj.discount)/100)*obj.price)}}</td>
+        </tr>
+    </tbody>
+</table>
